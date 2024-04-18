@@ -1,0 +1,37 @@
+ /* General CSS */
+ *{
+    box-sizing: border-box;
+ }
+ body{
+
+
+ }
+ ul{
+    list-style: none;
+ }
+ a{
+    text-decoration: none;
+ }
+
+ .display-flex-sb{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+ }
+ .display-flex-center{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 1rem;
+ }
+ .wrapper{
+    background-color: red;
+   
+ }
+ /* <!-- left section --> */
+
+
+/* <!-- middle section --> */
+
+
+ /* <!- right section -->  */
