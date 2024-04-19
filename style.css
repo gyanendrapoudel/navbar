@@ -3,9 +3,7 @@
    --shadow: 0px 2px 30px 5px lightgray;
    --color1: hsl(209, 34%, 45%);
    --color2: hsl(205, 87%, 67%);
-   --block: block;
-   --none: none;
-   --display: var(var(--block))
+  
  }
  *{
     box-sizing: border-box;
