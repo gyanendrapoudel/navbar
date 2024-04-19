@@ -3,6 +3,9 @@
    --shadow: 0px 2px 30px 5px lightgray;
    --color1: hsl(209, 34%, 45%);
    --color2: hsl(205, 87%, 67%);
+   --block: block;
+   --none: none;
+   --display: var(var(--block))
  }
  *{
     box-sizing: border-box;
@@ -37,6 +40,7 @@ overflow-x: hidden;
     background-color: white;
     box-shadow: var(--shadow);
    height:70px;
+   position: relative;
  }
  /* <!-- left section --> */
 .logo{
@@ -86,10 +90,26 @@ overflow-x: hidden;
          color: var(--color2);
  }
 /* ham */
-.ham{
+.hamburger-icon{
    display: none;
    font-size: 1.2rem;
+   font-size: 2rem;
+   transition: all 0.5s linear;
+}
+[for="ham"]{
    cursor: pointer;
+}
+[type="checkbox"]{
+   display: none;
+}
+.hamburger:checked +.navlinks{
+   display: block;
+}
+.hamburger-icon:hover{
+transform: scale(1.1);
+transform: rotate(90deg);
+color: var(--color2);
+ cursor: pointer;
 }
 
 
@@ -98,10 +118,41 @@ overflow-x: hidden;
       padding-left: 2rem;
       text-align: left;
      }
-     .navlinks ,.social-icons{
+     .social-icons{
       display: none;
      }
-     .ham{
-      display: block;
+     .navlinks {
+      display: none;
+      position: absolute;
+      bottom: -160px;
+      left: 10px;
+      width: 100%;
+      padding: 0;
+     
+      
      }
+     .navlinks>ul{
+      margin: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      width: 100%;
+      gap:0;
+     
+     }
+     .navlinks>ul>li{
+      width: 100%;
+      padding: 0.5rem 2rem;
+      transition: all 0.3s linear;
+     
+     }
+     .navlinks>ul>li:hover{
+      background-color: var(--color2);
+      padding: 0.5rem 4rem;
+     }
+     .hamburger-icon{
+      display: block;
+    
+     }
+    
  }
