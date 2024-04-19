@@ -1,9 +1,16 @@
  /* General CSS */
+ :root{
+   --shadow: 0px 2px 30px 5px lightgray;
+   --color1: hsl(209, 34%, 45%);
+   --color2: hsl(205, 87%, 67%);
+ }
  *{
     box-sizing: border-box;
  }
- body{
 
+ body{
+margin: 0;
+overflow-x: hidden;
 
  }
  ul{
@@ -17,6 +24,7 @@
     display: flex;
     justify-content:space-between;
     align-items: center;
+    gap:1rem;
  }
  .display-flex-center{
     display: flex;
@@ -25,13 +33,75 @@
     gap: 1rem;
  }
  .wrapper{
-    background-color: red;
-   
+   padding: 10px;
+    background-color: white;
+    box-shadow: var(--shadow);
+   height:70px;
  }
  /* <!-- left section --> */
-
+.logo{
+ 
+   flex: 1;
+   text-align: center;
+   font-size: 1.2rem;
+}
 
 /* <!-- middle section --> */
+.navlinks{
+   padding-right: 1rem;
+   flex: 2;
+   /* background-color: red;
+   */
 
-
+}
+.navlinks ul{
+   width: 100%;
+   gap: 2rem;
+   font-size: 1.2rem;
+   font-weight: 500;
+   color: var(--color1);
+  
+}
+.navlinks ul li{
+   cursor: pointer;
+   transition: all 0.3s linear;
+}
+.navlinks ul li:hover{
+   transform: scale(1.1);
+}
  /* <!- right section -->  */
+
+ .social-icons{
+   flex: 1;
+   padding-right: 1rem;
+
+ }
+ .social-icons ul{
+   width: 100%;
+
+   justify-content: flex-start;
+  
+ }
+ .social-icons ul li a {
+         color: var(--color2);
+ }
+/* ham */
+.ham{
+   display: none;
+   font-size: 1.2rem;
+   cursor: pointer;
+}
+
+
+ @media (max-width:600px) {
+     .logo{
+      padding-left: 2rem;
+      text-align: left;
+     }
+     .navlinks ,.social-icons{
+      display: none;
+     }
+     .ham{
+      display: block;
+     }
+ }
